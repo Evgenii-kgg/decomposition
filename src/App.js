@@ -10,6 +10,7 @@ import TvItem from './tvItem';
 import Tv from './tv';
 import OnLine from './onLine';
 import OnLineItem from './OnLineItem';
+import ItemList from './ItemList';
 
 function App() {
 
@@ -76,9 +77,9 @@ function App() {
         <Tv className="list" items={tv} logo={logo}>
             {(items) =>
               items.map((item, index) => (
-                <TvItem key={index} logo={logo}>
+                <ItemList key={index} >
                   {item}
-                </TvItem>
+                </ItemList>
               ))
             }
           </Tv>
@@ -87,9 +88,9 @@ function App() {
         <OnLine className="list" items={onLine} logo={logo}>
             {(items) =>
               items.map((item, index) => (
-                <OnLineItem key={index} logo={logo}>
+                <ItemList key={index} logo={logo}>
                   {item}
-                </OnLineItem>
+                </ItemList>
               ))
             }
           </OnLine>
